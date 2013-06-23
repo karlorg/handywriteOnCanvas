@@ -19,7 +19,7 @@ window.load = -> require ['handywriteOnCanvas'], (hoc) ->
   renderer = new hoc.DocumentRenderer(doc)
 
   words = [
-    { p: ['Th', 'uh'], w: 'the' },
+    { p: ['th', 'uh'], w: 'the' },
     { p: ['l', 'i', 'r', 'ng'], w: 'leering' },
     { p: ['k', 'w', 'ih', 'k'], w: 'quick' },
     { p: ['b', 'r', 'a', 'u', 'n'], w: 'brown' },
@@ -28,7 +28,7 @@ window.load = -> require ['handywriteOnCanvas'], (hoc) ->
     { p: ['k', 'aw', 't'], w: 'caught' },
     { p: ['j', 'c', 'm', 'p', 'ng'], w: 'jumping' },
     { p: ['o', 'v', 'r'], w: 'over' },
-    { p: ['Th', 'uh'], w: 'the' },
+    { p: ['th', 'uh'], w: 'the' },
     { p: ['l', 'ey', 'z', 'i'], w: 'lazy' },
     { p: ['d', 'a', 'g', 'z'], w: "dog's" },
     { p: ['sh', 'ay', 'n', 'i'], w: 'shiny' }

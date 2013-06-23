@@ -53,7 +53,7 @@ define ['grapheme', 'boxes', 'geometry'], (Grapheme, boxes, geometry) ->
       ctx.stroke()
       return
 
-  graphemes.classes.th = class UnvoicedTH extends Grapheme
+  graphemes.classes.th = class VoicedTH extends Grapheme
     getBoundingBox: -> new boxes.BoundingBox(0, - hHeight, hWidth, 0)
     getFinishPoint: -> { x: hWidth, y: - hHeight }
     getEntryAngle: -> 0
@@ -66,7 +66,8 @@ define ['grapheme', 'boxes', 'geometry'], (Grapheme, boxes, geometry) ->
         hWidth, - hHeight)
       ctx.stroke()
       return
-  graphemes.classes.Th = class VoicedTH extends Grapheme
+
+  graphemes.classes.Th = class UnvoicedTH extends Grapheme
     getBoundingBox: -> new boxes.BoundingBox(0, - hHeight, hWidth, 0)
     getFinishPoint: -> { x: hWidth, y: - hHeight }
     getEntryAngle: -> 3 * TAU / 4
