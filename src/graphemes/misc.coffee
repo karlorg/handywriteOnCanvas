@@ -24,7 +24,7 @@ define ['grapheme', 'boxes', 'geometry'], (Grapheme, boxes, geometry) ->
   lWidth = 1
   iRadius = eRadius = 0.05
 
-  graphemes.classes.ii = class II extends Grapheme
+  graphemes.classes.i = class I extends Grapheme
     constructor: ->
       super()
       @_entryAngle = @_exitAngle = 0
@@ -118,7 +118,7 @@ define ['grapheme', 'boxes', 'geometry'], (Grapheme, boxes, geometry) ->
       ctx.restore()
       return
 
-  graphemes.classes.oo = class OO extends Grapheme
+  graphemes.classes.aw = class AW extends Grapheme
     constructor: ->
       super()
       @_midlineAngle = 0

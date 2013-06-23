@@ -23,13 +23,13 @@ define ['grapheme', 'boxes', 'geometry'], (Grapheme, boxes, geometry) ->
 
   lWidth = 1
 
-  cAngle = jAngle = TAU / 3
+  shAngle = zhAngle = TAU / 3
   dAngle = tAngle = - TAU / 12
   ngAngle = nkAngle = TAU / 12
   dLength = lWidth
-  aiHeight = lWidth * 0.2
-  djHeight = lWidth * 0.8
-  jHeight = lWidth * 0.4
+  ayHeight = lWidth * 0.2
+  jHeight = lWidth * 0.8
+  shHeight = zhHeight = lWidth * 0.4
   mWidth = lWidth
   nWidth = lWidth * 0.4
   tLength = lWidth * 0.4
@@ -54,11 +54,11 @@ define ['grapheme', 'boxes', 'geometry'], (Grapheme, boxes, geometry) ->
       ctx.stroke()
       return
 
-  graphemes.classes.ai = class AI extends Line
+  graphemes.classes.ay = class AY extends Line
     _endPoint:
       # default value, may be modified by `decide()`
       x: 0
-      y: aiHeight
+      y: ayHeight
 
     constructor: ->
       super
@@ -86,8 +86,8 @@ define ['grapheme', 'boxes', 'geometry'], (Grapheme, boxes, geometry) ->
         choice = candidate
       # now we have our choice, apply it
       @_endPoint =
-        x: aiHeight * Math.cos(choice.angle)
-        y: aiHeight * Math.sin(choice.angle)
+        x: ayHeight * Math.cos(choice.angle)
+        y: ayHeight * Math.sin(choice.angle)
       @_determined = true
       return
 
@@ -116,18 +116,15 @@ define ['grapheme', 'boxes', 'geometry'], (Grapheme, boxes, geometry) ->
       @_determined = true
       return
 
-  graphemes.classes.c = class C extends Line
+  graphemes.classes.ch = class CH extends Line
     _endPoint:
-      x: jHeight * Math.cos(cAngle)
-      y: jHeight * Math.sin(cAngle)
+      x: jHeight * Math.cos(shAngle)
+      y: jHeight * Math.sin(shAngle)
 
   graphemes.classes.d = class D extends Line
     _endPoint:
       x: dLength * Math.cos(dAngle)
       y: dLength * Math.sin(dAngle)
-
-  graphemes.classes.dj = class DJ extends Line
-    _endPoint: { x: 0, y: djHeight }
 
   graphemes.classes.j = class J extends Line
     _endPoint: { x: 0, y: jHeight }
@@ -148,15 +145,18 @@ define ['grapheme', 'boxes', 'geometry'], (Grapheme, boxes, geometry) ->
       x: mWidth * Math.cos(nkAngle)
       y: mWidth * Math.sin(nkAngle)
 
+  graphemes.classes.sh = class SH extends Line
+    _endPoint:
+      x: shHeight * Math.cos(shAngle)
+      y: shHeight * Math.sin(shAngle)
+
   graphemes.classes.t = class T extends Line
     _endPoint:
       x: tLength * Math.cos(tAngle)
       y: tLength * Math.sin(tAngle)
 
-  graphemes.classes.tc = class TC extends Line
-    _endPoint:
-      x: jHeight * Math.cos(cAngle)
-      y: jHeight * Math.sin(cAngle)
+  graphemes.classes.zh = class ZH extends Line
+    _endPoint: { x: 0, y: zhHeight }
 
   return graphemes
   

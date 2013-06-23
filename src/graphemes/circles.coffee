@@ -122,6 +122,13 @@ define ['grapheme', 'boxes', 'geometry'], (Grapheme, boxes, geometry) ->
 
   graphemes.classes.a = class A extends Circle
     _radius: aRadius
+    _fixedDirection: true
+    constructor: ->
+      super
+      @_anticlockwise = false
+
+  graphemes.classes.ae = class AE extends Circle
+    _radius: aRadius
     _fixedDirection: false
     getFinishPoint: ->
       bbox = @getBoundingBox()
@@ -129,14 +136,14 @@ define ['grapheme', 'boxes', 'geometry'], (Grapheme, boxes, geometry) ->
         x: (bbox.left() + bbox.right()) * 0.5
         y: (bbox.top() + bbox.bottom()) * 0.5 }
 
-  graphemes.classes.e = class E extends Circle
+  graphemes.classes.eh = class EH extends Circle
     _radius: iRadius
     _fixedDirection: true
     constructor: ->
       super
       @_anticlockwise = true
 
-  graphemes.classes.ei = class EI extends Circle
+  graphemes.classes.ey = class EY extends Circle
     _radius: aRadius
     _fixedDirection: false
     render: (ctx) ->
@@ -159,21 +166,14 @@ define ['grapheme', 'boxes', 'geometry'], (Grapheme, boxes, geometry) ->
       ctx.restore()
       return
 
-  graphemes.classes.i = class I extends Circle
+  graphemes.classes.ih = class IH extends Circle
     _radius: iRadius
     _fixedDirection: true
     constructor: ->
       super
       @_anticlockwise = false
 
-  graphemes.classes.o = class O extends Circle
-    _radius: aRadius
-    _fixedDirection: true
-    constructor: ->
-      super
-      @_anticlockwise = false
-
-  graphemes.classes["'"] = class UH extends Circle
+  graphemes.classes.uh = class UH extends Circle
     _radius: aRadius
     _fixedDirection: true
     constructor: ->

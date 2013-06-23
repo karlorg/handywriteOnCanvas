@@ -19,20 +19,20 @@ window.load = -> require ['handywriteOnCanvas'], (hoc) ->
   renderer = new hoc.DocumentRenderer(doc)
 
   words = [
-    { p: ['zh', "'"], w: 'the' },
-    { p: ['l', 'ii', 'r', 'ng'], w: 'leering' },
-    { p: ['k', 'w', 'i', 'k'], w: 'quick' },
-    { p: ['b', 'r', 'o', 'uu', 'n'], w: 'brown' },
-    { p: ['f', 'o', 'k', 's'], w: 'fox' },
-    { p: ['w', 'o', 'z'], w: 'was' },
-    { p: ['k', 'oo', 't'], w: 'caught' },
-    { p: ['dj', 'u', 'm', 'p', 'ng'], w: 'jumping' },
-    { p: ['ou', 'v', 'r'], w: 'over' },
-    { p: ['zh', "'"], w: 'the' },
-    { p: ['l', 'ei', 'z', 'ii'], w: 'lazy' },
-    { p: ['d', 'o', 'g', 'z'], w: "dog's" },
-    { p: ['c', 'ai', 'n', 'ii'], w: 'shiny' }
-    { p: ['h', 'a', 't'], w: 'hat' }
+    { p: ['Th', 'uh'], w: 'the' },
+    { p: ['l', 'i', 'r', 'ng'], w: 'leering' },
+    { p: ['k', 'w', 'ih', 'k'], w: 'quick' },
+    { p: ['b', 'r', 'a', 'u', 'n'], w: 'brown' },
+    { p: ['f', 'a', 'k', 's'], w: 'fox' },
+    { p: ['w', 'a', 'z'], w: 'was' },
+    { p: ['k', 'aw', 't'], w: 'caught' },
+    { p: ['j', 'c', 'm', 'p', 'ng'], w: 'jumping' },
+    { p: ['o', 'v', 'r'], w: 'over' },
+    { p: ['Th', 'uh'], w: 'the' },
+    { p: ['l', 'ey', 'z', 'i'], w: 'lazy' },
+    { p: ['d', 'a', 'g', 'z'], w: "dog's" },
+    { p: ['sh', 'ay', 'n', 'i'], w: 'shiny' }
+    { p: ['h', 'ae', 't'], w: 'hat' }
     ]
 
   body = doc.getElementById('body')

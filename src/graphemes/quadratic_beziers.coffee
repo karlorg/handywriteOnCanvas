@@ -53,7 +53,7 @@ define ['grapheme', 'boxes', 'geometry'], (Grapheme, boxes, geometry) ->
       ctx.stroke()
       return
 
-  graphemes.classes.sh = class SH extends Grapheme
+  graphemes.classes.th = class UnvoicedTH extends Grapheme
     getBoundingBox: -> new boxes.BoundingBox(0, - hHeight, hWidth, 0)
     getFinishPoint: -> { x: hWidth, y: - hHeight }
     getEntryAngle: -> 0
@@ -63,6 +63,19 @@ define ['grapheme', 'boxes', 'geometry'], (Grapheme, boxes, geometry) ->
       ctx.moveTo(0,0)
       ctx.quadraticCurveTo(
         hWidth, 0,
+        hWidth, - hHeight)
+      ctx.stroke()
+      return
+  graphemes.classes.Th = class VoicedTH extends Grapheme
+    getBoundingBox: -> new boxes.BoundingBox(0, - hHeight, hWidth, 0)
+    getFinishPoint: -> { x: hWidth, y: - hHeight }
+    getEntryAngle: -> 3 * TAU / 4
+    getExitAngle: -> 0
+    render: (ctx) ->
+      ctx.beginPath()
+      ctx.moveTo(0,0)
+      ctx.quadraticCurveTo(
+        0, - hHeight,
         hWidth, - hHeight)
       ctx.stroke()
       return
@@ -92,20 +105,6 @@ define ['grapheme', 'boxes', 'geometry'], (Grapheme, boxes, geometry) ->
       ctx.quadraticCurveTo(
         0, sHeight,
         sWidth, sHeight)
-      ctx.stroke()
-      return
-
-  graphemes.classes.zh = class ZH extends Grapheme
-    getBoundingBox: -> new boxes.BoundingBox(0, - hHeight, hWidth, 0)
-    getFinishPoint: -> { x: hWidth, y: - hHeight }
-    getEntryAngle: -> 3 * TAU / 4
-    getExitAngle: -> 0
-    render: (ctx) ->
-      ctx.beginPath()
-      ctx.moveTo(0,0)
-      ctx.quadraticCurveTo(
-        0, - hHeight,
-        hWidth, - hHeight)
       ctx.stroke()
       return
 

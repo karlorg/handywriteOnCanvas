@@ -61,6 +61,13 @@ define ['grapheme', 'boxes', 'geometry'], (Grapheme, boxes, geometry) ->
       { x: - lWidth / 3, y: 11 * lWidth / 12 },
       { x: - lWidth / 4, y: lWidth } ]
 
+  graphemes.classes.c = class C extends CubicBezier
+    _p: [
+      { x: 0, y: 0 }
+      { x: - rWidth / 2, y: 0 }
+      { x: - rWidth / 2, y: rWidth / 3 }
+      { x: 0, y: rWidth / 3 } ]
+
   graphemes.classes.f = class F extends CubicBezier
     _p: [
       { x: 0, y: 0 },
@@ -89,7 +96,7 @@ define ['grapheme', 'boxes', 'geometry'], (Grapheme, boxes, geometry) ->
       { x: rWidth / 2, y: - lWidth / 6 },
       { x: rWidth, y: 0 } ]
 
-  graphemes.classes.ou = class OU extends CubicBezier
+  graphemes.classes.o = class O extends CubicBezier
     _p: [
       { x: 0, y: 0}
       { x: rWidth / 2, y: - rWidth / 4 }
@@ -111,13 +118,6 @@ define ['grapheme', 'boxes', 'geometry'], (Grapheme, boxes, geometry) ->
       { x: rWidth, y: 0 } ]
 
   graphemes.classes.u = class U extends CubicBezier
-    _p: [
-      { x: 0, y: 0 }
-      { x: - rWidth / 2, y: 0 }
-      { x: - rWidth / 2, y: rWidth / 3 }
-      { x: 0, y: rWidth / 3 } ]
-
-  graphemes.classes.uu = class UU extends CubicBezier
     _p: [
       { x: 0, y: 0 }
       { x: 0, y: rWidth / 2 }
