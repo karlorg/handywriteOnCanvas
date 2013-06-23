@@ -13,7 +13,7 @@ along with this software. If not, see
 <http://creativecommons.org/publicdomain/zero/1.0/>.
 ###
 
-define ['graphemes/quadratic_beziers', 'graphemes/cubic_beziers', 'graphemes/circles', 'graphemes/lines', 'graphemes/misc'], (quads, cubics, circles, lines, misc) ->
+define ['./graphemes/quadratic_beziers', './graphemes/cubic_beziers', './graphemes/circles', './graphemes/lines', './graphemes/misc'], (quads, cubics, circles, lines, misc) ->
   'use strict'
 
   graphemes = {}

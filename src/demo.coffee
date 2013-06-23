@@ -13,7 +13,7 @@ along with this software. If not, see
 <http://creativecommons.org/publicdomain/zero/1.0/>.
 ###
 
-window.load = -> require ['handywriteOnCanvas'], (hoc) ->
+window.load = -> require ['./handywriteOnCanvas/handywriteOnCanvas'], (hoc) ->
   doc = window.document
 
   renderer = new hoc.DocumentRenderer(doc)

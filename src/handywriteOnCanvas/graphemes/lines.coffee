@@ -13,7 +13,7 @@ along with this software. If not, see
 <http://creativecommons.org/publicdomain/zero/1.0/>.
 ###
 
-define ['grapheme', 'boxes', 'geometry'], (Grapheme, boxes, geometry) ->
+define ['../grapheme', '../boxes', '../geometry'], (Grapheme, boxes, geometry) ->
   'use strict'
 
   graphemes = {}

@@ -13,7 +13,7 @@ along with this software. If not, see
 <http://creativecommons.org/publicdomain/zero/1.0/>.
 ###
 
-define ['./all_graphemes', 'boxes'], (allGraphemes, boxes) ->
+define ['./all_graphemes', './boxes'], (allGraphemes, boxes) ->
   'use strict'
 
   hoc = {}
