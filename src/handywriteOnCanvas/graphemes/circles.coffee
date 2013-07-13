@@ -102,7 +102,10 @@ define ['../grapheme', '../boxes', '../geometry'], (Grapheme, boxes, geometry) -
       theta = @_exitAngle
       sinTheta = Math.sin(theta)
       cosTheta = Math.cos(theta)
-      return { x: r * sinTheta + r + offset.x, y: r - r * cosTheta + offset.y }
+      clockwise = if @_anticlockwise then -1 else 1
+      return {
+        x: clockwise * r * sinTheta + r + offset.x
+        y: r - clockwise * r * cosTheta + offset.y }
 
     getEntryAngle: -> @_entryAngle
     getExitAngle: -> @_exitAngle

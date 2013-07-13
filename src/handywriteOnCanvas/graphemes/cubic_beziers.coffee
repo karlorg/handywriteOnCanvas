@@ -131,4 +131,11 @@ define ['../grapheme', '../boxes', '../geometry'], (Grapheme, boxes, geometry) -
       { x: lWidth / 10, y: lWidth / 2 },
       { x: - 3 * lWidth / 8, y: lWidth } ]
 
+  graphemes.classes.y = class Y extends CubicBezier
+    _p: [
+      { x: 0, y: 0 }
+      { x: lWidth / 10, y: 0 }
+      { x: lWidth / 10, y: 0 }
+      { x: lWidth / 8, y: lWidth } ]
+
   return graphemes
